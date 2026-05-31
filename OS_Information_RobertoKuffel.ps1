@@ -17,7 +17,6 @@ process {
         
         $inputStr = Read-Host "Enter a selection (1-9)"
         
-        # Validação de entrada para garantir que é um número e está dentro do intervalo
         if ([int]::TryParse($inputStr, [ref]$userChoice)) {
             if ($userChoice -ge 1 -and $userChoice -le 9) {
                 try {
