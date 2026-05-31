@@ -3,7 +3,7 @@
     Context "Module Availability" {
         It "Should return the module if installed" {
             $result = Get-Module -ListAvailable -Name PSScriptAnalyzer
-            $result | Should -Not -BeNullOrEmpty
+            $result | Should Not BeNullOrEmpty
         }
     }
 
@@ -11,7 +11,7 @@
         It "Should have no errors or warnings" {
             $scriptPath = "$PSScriptRoot\OS_Information_RobertoKuffel.ps1"
             $result = Invoke-ScriptAnalyzer -Path $scriptPath | Where-Object { $_.FunctionName -eq 'Get-OSVersion' }
-            $result | Should -BeNullOrEmpty
+            $result | Should BeNullOrEmpty
         }
     }
 
@@ -19,7 +19,7 @@
         It "Should have no errors or warnings" {
             $scriptPath = "$PSScriptRoot\OS_Information_RobertoKuffel.ps1"
             $result = Invoke-ScriptAnalyzer -Path $scriptPath | Where-Object { $_.FunctionName -eq 'Get-RemoteServiceStatus' }
-            $result | Should -BeNullOrEmpty
+            $result | Should BeNullOrEmpty
         }
     }
 
@@ -27,7 +27,7 @@
         It "Should have no errors or warnings" {
             $scriptPath = "$PSScriptRoot\OS_Information_RobertoKuffel.ps1"
             $result = Invoke-ScriptAnalyzer -Path $scriptPath | Where-Object { $_.FunctionName -eq 'Get-PCModel' }
-            $result | Should -BeNullOrEmpty
+            $result | Should BeNullOrEmpty
         }
     }
 
@@ -35,7 +35,7 @@
         It "Should have no errors or warnings" {
             $scriptPath = "$PSScriptRoot\OS_Information_RobertoKuffel.ps1"
             $result = Invoke-ScriptAnalyzer -Path $scriptPath | Where-Object { $_.FunctionName -eq 'Get-PCName' }
-            $result | Should -BeNullOrEmpty
+            $result | Should BeNullOrEmpty
         }
     }
 
@@ -43,7 +43,7 @@
         It "Should have no errors or warnings" {
             $scriptPath = "$PSScriptRoot\OS_Information_RobertoKuffel.ps1"
             $result = Invoke-ScriptAnalyzer -Path $scriptPath | Where-Object { $_.FunctionName -eq 'Get-DomainName' }
-            $result | Should -BeNullOrEmpty
+            $result | Should BeNullOrEmpty
         }
     }
 
@@ -51,7 +51,7 @@
         It "Should have no errors or warnings" {
             $scriptPath = "$PSScriptRoot\OS_Information_RobertoKuffel.ps1"
             $result = Invoke-ScriptAnalyzer -Path $scriptPath | Where-Object { $_.FunctionName -eq 'Get-TrustedHosts' }
-            $result | Should -BeNullOrEmpty
+            $result | Should BeNullOrEmpty
         }
     }
 
@@ -59,7 +59,7 @@
         It "Should have no errors or warnings" {
             $scriptPath = "$PSScriptRoot\OS_Information_RobertoKuffel.ps1"
             $result = Invoke-ScriptAnalyzer -Path $scriptPath | Where-Object { $_.FunctionName -eq 'Get-OSArch' }
-            $result | Should -BeNullOrEmpty
+            $result | Should BeNullOrEmpty
         }
     }
 
@@ -67,7 +67,7 @@
         It "Should have no errors or warnings" {
             $scriptPath = "$PSScriptRoot\OS_Information_RobertoKuffel.ps1"
             $result = Invoke-ScriptAnalyzer -Path $scriptPath | Where-Object { $_.FunctionName -eq 'Get-AllInfo' }
-            $result | Should -BeNullOrEmpty
+            $result | Should BeNullOrEmpty
         }
     }
 }
